@@ -1,0 +1,135 @@
+* {
+	font-weight: 300;
+	font-family: system-ui;
+	--primary: #588fec;
+	--bg: #1b1b1b;
+	--text: #ffffff;
+	--thickness: 1px;
+  }
+  
+  @media (prefers-color-scheme: light) {
+	* {
+	  --primary: #588fec;
+	  --text: #ffffff;
+	  --bg: #1b1b1b;
+	}
+  
+	button:hover,
+	select:hover {
+	  color: var(--bg);
+	}
+  }
+  
+  html {
+	margin: 0;
+	padding: 0;
+	background-color: var(--bg);
+	color: var(--text);
+  }
+  
+  .stuff {
+	margin: auto;
+	width: 75vw;
+	padding: 20px;
+  }
+  
+  .flex {
+	display: flex;
+	gap: 2rem;
+  }
+  
+  .left, .right {
+	flex: 1;
+  }
+  
+  .video-container {
+	position: relative;
+	width: 100%;
+	margin-bottom: 1rem;
+  }
+  
+  #webcam, #canvas {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+  }
+  
+  #canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+  }
+  
+  .camera-controls, .prompt-controls {
+	display: flex;
+	gap: 0.5rem;
+	margin-top: 1rem;
+  }
+  
+  #api {
+	width: 100%;
+	padding: 0.8rem;
+	margin-bottom: 1rem;
+	background-color: black; /* Set background to black */
+	color: white; /* Set text color to white */
+	border: 1px solid var(--primary); /* Keep the border color consistent */
+  }
+  
+  
+  textarea {
+	width: 100%;
+	height: 150px;
+	padding: 0.8rem;
+	margin-bottom: 1rem;
+	resize: vertical;
+	background-color: black; /* Set background to black */
+	color: white; /* Set text color to white */
+	border: 1px solid var(--primary); /* Keep the border color consistent */
+  }
+  
+  select, button {
+	flex: 1;
+	padding: 0.8rem;
+	background-color: var(--bg);
+	color: var(--text);
+	border: 1px solid var(--primary);
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  button:hover, select:hover {
+	background-color: var(--primary);
+	transition: all 200ms;
+  }
+  
+  #response {
+	margin-top: 2rem;
+	padding: 1rem;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 4px;
+  }
+  
+  .settings-toggle {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+  }
+  
+  @media only screen and (max-width: 1000px) {
+	.stuff {
+	  width: 90vw;
+	}
+  
+	.flex {
+	  flex-direction: column;
+	}
+  
+	.left, .right {
+	  width: 100%;
+	}
+  
+	textarea {
+	  height: 100px;
+	}
+  }

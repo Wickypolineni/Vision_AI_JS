@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/gemini.png" type="image/png">
+  <meta name="description" content="A demo of Google's latest multimodal AI, gemini-1.5-flash">
+  <link rel="manifest" href="./manifest.json">
+  <meta name="keywords"
+    content="google, gemini, image-analysis, gemini-flash, google-ai, gpt, chatgpt, ai, llm, gemini-demo, chiroyce">
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "@google/generative-ai": "https://esm.run/@google/generative-ai"
+      }
+    }
+  </script>
+  <title>AI Vision</title>
+</head>
+
+<body>
+  <div class="stuff">
+    <div class="flex">
+      <div class="left">
+        <div class="video-container">
+          <video id="webcam" autoplay></video>
+          <canvas id="canvas" width="640" height="480"></canvas>
+        </div>
+        <div class="camera-controls">
+          <select id="cameraSelect"></select>
+          <button id="click">Take picture 📸</button>
+          <div class="settings-toggle">
+            <input type="checkbox" id="hide">
+            <label for="hide">Hide settings</label>
+          </div>
+        </div>
+      </div>
+      <div class="right" id="settings">
+        <input type="password" id="api" placeholder="Enter API key (get it from ai.google.dev)">
+        <textarea id="prompt" placeholder="Enter prompt here"></textarea>
+        <div class="prompt-controls">
+          <select id="promptSelect"></select>
+          <button id="speak">Speak</button>
+        </div>
+      </div>
+    </div>
+    <p id="response"></p>
+  </div>
+  <script src="./script.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+</body>
+
+</html>
