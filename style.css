@@ -5,131 +5,239 @@
 	--bg: #1b1b1b;
 	--text: #ffffff;
 	--thickness: 1px;
-  }
-  
-  @media (prefers-color-scheme: light) {
+}
+
+@media (prefers-color-scheme: light) {
 	* {
-	  --primary: #588fec;
-	  --text: #ffffff;
-	  --bg: #1b1b1b;
+		--primary: #588fec;
+		--text: #1b1b1b;
+		--bg: #ffffff;
 	}
-  
+
 	button:hover,
 	select:hover {
-	  color: var(--bg);
+		color: var(--bg);
 	}
-  }
-  
-  html {
+
+	img {
+		background-color: black;
+		border-radius: 50%;
+	}
+}
+
+html {
 	margin: 0;
 	padding: 0;
 	background-color: var(--bg);
 	color: var(--text);
-  }
-  
-  .stuff {
-	margin: auto;
-	width: 75vw;
-	padding: 20px;
-  }
-  
-  .flex {
-	display: flex;
-	gap: 2rem;
-  }
-  
-  .left, .right {
-	flex: 1;
-  }
-  
-  .video-container {
-	position: relative;
-	width: 100%;
-	margin-bottom: 1rem;
-  }
-  
-  #webcam, #canvas {
-	width: 100%;
-	height: auto;
-	border-radius: 8px;
-  }
-  
-  #canvas {
-	position: absolute;
-	top: 0;
-	left: 0;
-	pointer-events: none;
-  }
-  
-  .camera-controls, .prompt-controls {
-	display: flex;
-	gap: 0.5rem;
-	margin-top: 1rem;
-  }
-  
-  #api {
-	width: 100%;
-	padding: 0.8rem;
-	margin-bottom: 1rem;
-	background-color: black; /* Set background to black */
-	color: white; /* Set text color to white */
-	border: 1px solid var(--primary); /* Keep the border color consistent */
-  }
-  
-  
-  textarea {
-	width: 100%;
-	height: 150px;
-	padding: 0.8rem;
-	margin-bottom: 1rem;
-	resize: vertical;
-	background-color: black; /* Set background to black */
-	color: white; /* Set text color to white */
-	border: 1px solid var(--primary); /* Keep the border color consistent */
-  }
-  
-  select, button {
-	flex: 1;
-	padding: 0.8rem;
+}
+
+select {
 	background-color: var(--bg);
 	color: var(--text);
+	cursor: pointer;
+	text-align: center;
+	padding: 1em 2em;
 	border: 1px solid var(--primary);
 	border-radius: 4px;
+	font-size: 1em;
+	width: 100%;
+	margin-bottom: 0.5em;
+}
+
+video {
+	border-radius: 4px;
+	margin-bottom: 1em;
+}
+
+.stuff {
+	margin: auto;
+	width: 75vw;
+}
+
+.stuff > h1 {
+	margin-bottom: 1.5em;
+	font-size: 3em;
+	font-weight: 100;
+	text-align: center;
+}
+
+textarea {
+	height: 260px;
+	background-color: var(--bg);
+	color: var(--text);
+	border: var(--thickness) solid var(--primary);
+	padding: 0.5em;
+	border-radius: 3px;
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+
+.right {
+	width: 50%;
+	margin-left: 1em;
+	display: flex;
+	flex-direction: column;
+}
+
+button {
 	cursor: pointer;
-  }
-  
-  button:hover, select:hover {
+	width: 100%;
+	padding: 1em 2em;
+	background-color: var(--bg);
+	color: var(--text);
+	border: var(--thickness) solid var(--primary);
+	border-radius: 4px;
+	font-size: 1.2em;
+}
+
+.left {
+	width: 50%;
+	margin-left: 1.5em;
+}
+
+video {
+	max-width: 100%;
+}
+
+.flex {
+	display: flex;
+}
+
+#response {
+	margin-bottom: 3em;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+
+button:hover,
+select:hover {
 	background-color: var(--primary);
 	transition: all 200ms;
-  }
-  
-  #response {
-	margin-top: 2rem;
-	padding: 1rem;
-	background-color: rgba(255, 255, 255, 0.1);
-	border-radius: 4px;
-  }
-  
-  .settings-toggle {
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-  }
-  
-  @media only screen and (max-width: 1000px) {
+}
+
+input[type="password"] {
+	background-color: var(--bg);
+	color: var(--text);
+	border: var(--thickness) solid var(--primary);
+	padding: 0.5em;
+	margin-bottom: 3px;
+	border-radius: 3px;
+}
+
+@media only screen and (max-width: 1000px) {
 	.stuff {
-	  width: 90vw;
+		width: 90vw;
 	}
-  
-	.flex {
-	  flex-direction: column;
-	}
-  
-	.left, .right {
-	  width: 100%;
-	}
-  
+
 	textarea {
-	  height: 100px;
+		height: 50px;
 	}
-  }
+}
+
+@media only screen and (max-width: 1000px) {
+	.flex {
+		flex-direction: column;
+		align-items: center;
+		max-width: 95vw;
+	}
+
+	.left,
+	.right {
+		height: auto;
+		width: 90vw;
+		margin: 0;
+	}
+
+	.stuff {
+		max-width: 100vw;
+		margin: auto;
+	}
+
+	button,
+	select {
+		width: 90vw;
+		margin-bottom: 10px;
+	}
+	.stuff > h1 {
+		margin-bottom: 1em;
+		font-size: 2em;
+		font-weight: 100;
+	}
+
+	textarea {
+		height: 50px;
+	}
+}
+
+.speech-checkbox {
+	margin-top: 0.5em;
+	display: flex;
+	gap: 1;
+	justify-content: space-between;
+}
+
+.speech-checkbox > input {
+	cursor: pointer;
+}
+
+img {
+	height: 50px;
+	transform: translateY(8px) translateX(-6px);
+}
+
+/* Position the gear icon in the top-right corner */
+#api-key-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+#gear-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Style the API key modal */
+#api-key-modal {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#api-key-modal.hidden {
+  display: none;
+}
+
+#api-key-input {
+  padding: 5px;
+  border: 1px solid var(--primary);
+  border-radius: 3px;
+  width: 100%;
+}
+
+#save-api-key {
+  padding: 5px;
+  background-color: var(--primary);
+  color: var(--bg);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#save-api-key:hover {
+  background-color: var(--text);
+  color: var(--primary);
+}
