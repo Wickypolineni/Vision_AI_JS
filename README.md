@@ -1,16 +1,61 @@
-# gemini-vision
+# 🌟 Gemini Vision - AI with Eyes! 🌟
 
-A demo of Google's latest vision based AI model, [gemini-pro-vision](https://deepmind.google/technologies/gemini/).
+Hey there, human! 👋 I'm **Gemini Vision**, the latest and greatest AI spectacle built with Google's mind-blowing [Gemini-Pro-Vision](https://deepmind.google/technologies/gemini/) model. Ever wondered what AI sees when it looks at you? Let's find out together! 🚀
 
-**[TRY IT HERE!](https://chiroyce1.github.io/gemini-vision/)** (bring your own API key...)
+## 🚨 TRY IT LIVE! 🚨
 
+[**👉 Click here to experience the AI magic! 👈**](https://vision-ai-js.vercel.app/)  
+*(Bring your own Google API key! 🔑 Don’t worry, it stays private!)*
 
-## API Key
-You can obtain a free API key for `gemini-vision-pro` from [Google AI Studio](https://ai.google.dev/), then paste it into the `API_KEY` password input field. Don't worry it won't be saved or sent anywhere, except along with the requests to Google's server running Gemini.
+---
 
-## Server Side Request
-Use the [`server`](https://github.com/Chiroyce1/gemini-vision/tree/server) branch to run a flask server with an API_KEY stored in `.env`, so that users can use it without having to bring their own key. Documentation in the `README.md` of that branch. 
+## 🦸‍♂️ What Can Gemini Vision Do?
 
-## Extra
-- Yes the UI is wonky, it was just plain HTML yesterday but I decided to make it a bit ✨ pretty ✨ so it looks presentable, feel free to make pull requests for UI improvements.
-- Any bugs/issues with a specific browser/OS or in general, make an issue [here](https://github.com/Chiroyce1/gemini-vision/issues).
+- 📸 **Real-time Image Analysis**: Snap pictures, analyze surroundings, identify celebrities, or even cars—Gemini Vision sees it all!
+- 🎙️ **Speak & Interact**: Talk to Gemini Vision or let it narrate everything it sees. It listens, responds, and engages like a best friend who's also a genius.
+- 🌎 **Location Detective**: Guess the exact city, region, and country from just a single snapshot. Yes, it's like Sherlock Holmes, but digital and cooler.
+- 🎬 **Live Mode Madness**: Activate live mode to continuously analyze your surroundings, perfect for impressing friends or just understanding your chaotic environment.
+- 🛠️ **Repair & Learn**: Broken gadget or tricky diagram? Gemini Vision's got solutions. Instant insights and easy-to-follow advice!
+
+---
+
+## 🔧 Quick Setup
+
+1. Get your **Google AI Studio API Key** from [here](https://ai.google.dev/).
+2. Click the gear ⚙️ icon in the app and paste your API key.
+3. Snap a pic 📷 or hit "Live Mode" and let the magic happen! ✨
+
+---
+
+## 💻 Developer Zone
+
+Built with:
+- ⚡ **Google Gemini API** (gemini-1.5-flash-8b & gemini-2.0-flash)
+- 🌐 Vanilla JavaScript + HTML/CSS
+- 🎨 Responsive UI magic for all screens
+
+Wanna tweak? Pull requests are **always** welcome!
+
+---
+
+## 🙌 Community & Contribution
+
+Join the fun:
+- 🌟 **Report Bugs**: [Issues Page](https://github.com/Wickypolinei/gemini-vision/issues)
+- 🚀 **Contribute**: Make this project even cooler—UI, UX, feature suggestions? Go wild!
+
+---
+
+## 👤 Author
+
+**Sathwik**  
+🌟 [github.com/Wickypolinei](https://github.com/Wickypolinei)
+
+---
+
+## 📜 License
+
+Licensed under the Apache License 2.0.
+
+Made with 💖 by Sathwik. Keep exploring and stay curious! 🌌🛰️
+
