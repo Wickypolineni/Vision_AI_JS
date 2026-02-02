@@ -157,7 +157,7 @@ async function captureImage() {
   }
 
   const model = genAI.getGenerativeModel({
-    model: "gemini-1.5-flash-8b",
+    model: "gemini-2.5-flash",
     safetySettings,
   });
   show("Loading... ");
@@ -296,3 +296,4 @@ async function fileToGenerativePart(file) {
     inlineData: { data: await base64EncodedDataPromise, mimeType: file.type },
   };
 }
+
